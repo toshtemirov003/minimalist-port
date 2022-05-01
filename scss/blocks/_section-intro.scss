@@ -1,0 +1,103 @@
+.section-intro {
+    padding-bottom: 260px;
+    background-image: url(../img/intro-fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.section-intro__content-wrapper {
+    width: 100%;
+    max-width: 445px;
+    padding-top: 56px;
+    padding-right: 55px;
+    text-align: left;
+    transform: translateY(260px);
+    background-color: $color-very-light;
+}
+.section-intro__desc {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 53px;
+    font-family: $font-ibarra;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.446429px;
+    color: $color-grayish-blue;
+}
+.section-intro__btn {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 200px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    background-color: $color-dark-blue;
+    &:hover{
+        background-color: $color-cyan;
+    }
+}
+.section-intro__btn-span-img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 5;
+    top: 9px;
+    left: 14px;
+    text-align-last: left;
+}
+.section-intro__btn-span-text{
+    width: 152px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .section-intro {
+        background-image: url(../../img/intro-fon2x.jpg);
+    }
+}
+@include breakpoint-down(768px){
+    .section-intro {
+        padding-bottom: 260px;
+        background-image: url(../img/intro-fon-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .section-intro__content-wrapper {
+        width: 100%;
+        max-width: 542px;
+    }
+}
+@include breakpoint-down(630px){
+    .section-intro__content-wrapper {
+        width: 100%;
+        max-width: 440px;
+    }
+}
+@include breakpoint-down(500px){
+    .section-intro {
+        padding-bottom: 260px;
+        background-image: url(../img/intro-fon-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .section-intro__content-wrapper {
+        width: 100%;
+        max-width: 440px;
+        transform: translateY(512px);
+        background-color: #fff;
+    }
+}

@@ -1,0 +1,9 @@
+.site-logo {
+    transition: opacity 0.3s ease;
+    &:hover{
+        opacity: 0.4;
+    }
+}
+.site-logo__img {
+    display: block;
+}

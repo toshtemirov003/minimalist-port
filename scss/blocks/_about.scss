@@ -1,0 +1,113 @@
+.about {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about__img {
+    width: 540px;
+    height: 600px;
+    padding-right: 15px;
+}
+.about__content-wrapper {
+    &::before{
+        margin-bottom: 50px;
+        display: block;
+        border: 1px solid $color-grayish-blue;
+        opacity: 0.15;
+        content: '';
+    }
+    &::after{
+        margin-top: 50px;
+        display: block;
+        border: 1px solid $color-grayish-blue;
+        opacity: 0.15;
+        content: '';
+    }
+}
+.about__heading {  
+    padding: 0;  
+    margin: 0;
+    margin-bottom: 28px;
+    font-family: $font-ibarra;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.357143px;
+    color: $color-grayish-blue;                   
+}
+.about__desc {
+    width: 100%;
+    max-width: 490px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 24px;    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color-grayish-blue;
+    opacity: 0.8;
+}
+.about__link {
+    display: inline-block;
+    padding: 17px 36px 17px 32px;
+    color: $color-grayish-blue;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid $color-grayish-blue;
+    &:hover{
+        color: $color-very-light;
+        background-color: $color-grayish-blue;
+    }
+}
+@include breakpoint-down(768px){
+    .about__content-wrapper {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+@include breakpoint-down(680px){
+    .about__content-wrapper {
+        width: 100%;
+        max-width: 350px;
+    }
+    .about__heading {
+        font-size: 36px;
+        line-height: 40px;             
+    }
+    .about__desc {
+        width: 100%;
+        max-width: 3850px;
+        font-size: 12px;
+        line-height: 25px;
+    }
+}
+@include breakpoint-down(600px){
+    .about {
+        flex-direction: column;
+    }
+    .about__img {
+        margin-bottom: 24px;
+    }
+    .about__content-wrapper {
+        width: 100%;
+        max-width: 500px;
+    }
+    .about__heading {
+        font-size: 40px;
+        line-height: 42px;             
+    }
+    .about__desc {
+        width: 100%;
+        max-width: 450px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+@include breakpoint-down(500px){
+    .about {
+        transform: translateY(200px);
+        padding-bottom: 100px;
+    }
+}

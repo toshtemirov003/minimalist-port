@@ -1,0 +1,120 @@
+.contact-me {
+    padding-bottom: 109px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.contact-me__heading {
+    padding: 0;
+    margin: 0;
+    font-family: $font-ibarra;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.3px;
+    color: $color-grayish-blue;
+}
+.contact-me__form {
+    width: 100%;
+    max-width: 635px;
+    display: flex;
+    flex-direction: column;
+}
+.contact-me__label {
+    margin-bottom: 8px;
+}
+.contact-me__form-email-wrapper{
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+.contact-me__form-email-wrapper .contact-me__form-input {
+    width: 100%;
+    max-width: 635px;
+    display: block;
+}
+.contact-me__form-input {
+    width: 100%;
+    max-width: 635px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 16px;
+    padding-right: 30px;
+    margin-bottom: 24px;
+    border: none;
+    background-color: #33323d25;
+    &::placeholder{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 30px;
+        color: $color-grayish-blue;
+        opacity: 0.9;
+    }
+}
+.contact-me__form-input:not(:focus):invalid:not(:placeholder-shown){
+    border: 1px solid $color-bright-red;
+    opacity: 0.9;
+}
+.contact-me__form-input:not(:focus):valid:not(:placeholder-shown){
+    border: 3px solid $color-cyan;
+}
+.contact-me__form-input:not(:focus):invalid:not(:placeholder-shown) + .contact-me__form-input-error{
+    display: block;
+}
+.contact-me__form-input-error{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    top: 50px;
+    padding: 5px;
+    display: none;
+    font-weight: bold;
+    color: $color-bright-red;
+    opacity: 1;
+}
+.contact-me__form-message{
+    resize: none;
+}
+.contact-me__form-btn{
+    max-width: 200px;
+    padding: 17px 24px;
+    border: none;
+    background-color: $color-dark-blue;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
+    &:hover{
+        color: $color-dark-blue;
+        background-color: $color-light-grey;
+    }
+}
+@include breakpoint-down(915px){
+    .contact-me__form {
+        width: 100%;
+        max-width: 500px;
+    }
+    .contact-me__form-input {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+@include breakpoint-down(768px){
+    .contact-me {
+        flex-direction: column;
+    }
+    .contact-me__heading {
+        margin-bottom: 32px;
+    }
+}
+@include breakpoint-down(500px){
+    .contact-me__form-input {
+        width: 100%;
+        max-width: 311px;
+    }
+    .contact-me__form-email-wrapper .contact-me__form-input {
+        width: 100%;
+        max-width: 311px;
+    }
+}

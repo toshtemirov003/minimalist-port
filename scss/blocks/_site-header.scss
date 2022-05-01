@@ -1,0 +1,23 @@
+.site-header {  
+    padding-top: 64px;
+    padding-bottom: 54px;
+}
+.site-header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-header__btn {
+    display: none;
+}
+@include breakpoint-down(500px){
+    .site-header {  
+        position: relative;
+        z-index: 1;
+    }
+    .site-header__btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+    }
+}
