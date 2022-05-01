@@ -88,7 +88,9 @@ only screen and (                min-resolution: 2dppx) {
 }
 @include breakpoint-down(500px){
     .section-intro {
+        height: 370px;
         padding-bottom: 260px;
+        margin-bottom: 200px;
         background-image: url(../img/intro-fon-mobile.jpg);
         background-repeat: no-repeat;
         background-size: contain;
@@ -97,7 +99,17 @@ only screen and (                min-resolution: 2dppx) {
     .section-intro__content-wrapper {
         width: 100%;
         max-width: 440px;
-        transform: translateY(512px);
+        transform: translateY(359px);
         background-color: #fff;
+    }
+}
+@include breakpoint-down(480px){
+    .section-intro {
+        margin-bottom: 250px;
+    }
+}
+@include breakpoint-down(400px){
+    .section-intro {
+        margin-bottom: 350px;
     }
 }
