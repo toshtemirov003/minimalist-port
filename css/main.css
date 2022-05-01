@@ -574,6 +574,11 @@ img {
   background-color: #5fb4a2;
 }
 
+.section-intro__btn-span {
+  text-decoration: none;
+  color: #fff;
+}
+
 .section-intro__btn-span-img {
   width: 30px;
   height: 30px;
